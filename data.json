@@ -1,0 +1,61 @@
+{
+  "students": [
+    {
+      "name": "Abby",
+      "native_language": "Chinese",
+      "target_language": "English",
+      "learning_preferences": {
+        "speaking": true,
+        "listening": false,
+        "reading": true,
+        "writing": true,
+        "pronunciation": false
+      }
+    },
+
+    {
+      "name": "Johnny",
+      "native_language": "Spanish",
+      "target_language": "English",
+      "learning_preferences": {
+        "speaking": false,
+        "listening": false,
+        "reading": true,
+        "writing": true,
+        "pronunciation": false
+      }
+    }
+  ],
+
+  "teachers": [
+    {
+      "name": "Bob",
+      "languages_spoken":["English"],
+      "target_language": "English",
+      "teaching_style": {
+        "structured": true,
+        "grammar_focused": true
+      }
+    },
+
+    {
+      "name": "Tom",
+      "languages_spoken":["Spanish", "English"],
+      "target_language": "English",
+      "teaching_style": {
+        "structured": false,
+        "grammar_focused": false
+      }
+    },
+
+    {
+      "name": "Ann",
+      "languages_spoken":["Portuguese", "English"],
+      "target_language": "English",
+      "teaching_style": {
+        "structured": true,
+        "grammar_focused": false
+      }
+    }
+  ]
+}
