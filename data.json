@@ -2,7 +2,7 @@
   "students": [
     {
       "name": "Abby",
-      "native_language": "Chinese",
+      "native_language": ["Cantonese", "Mandarin"],
       "target_language": "English",
       "learning_preferences": {
         "speaking": true,
