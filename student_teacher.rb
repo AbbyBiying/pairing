@@ -1,5 +1,7 @@
 require "json"
 
+# specify the point of each category when value of the properties are true both for student and teacher
+
 POINT_SYSTEM = {
   "structured" => {
     "speaking" =>       0,
@@ -21,6 +23,7 @@ POINT_SYSTEM = {
 class Student
   attr_reader :properties
 
+  # initialize all the properites for student from the json into a hash
   def initialize(properties = {})
     @properties = properties
   end
@@ -30,6 +33,7 @@ class Student
     PairByOrder.new(pair_array).order_array
   end
 
+  # map out the raw students' data into a new array of student objects
   def self.all
     load_data.map do |student_data|
       new(student_data)
@@ -37,6 +41,7 @@ class Student
   end
 
   private
+  # parse the json file into a hash and return only the students' properties
   def self.load_data
     json_hash = JSON.parse( IO.read("data.json") )
     return json_hash["students"]
@@ -45,10 +50,13 @@ end
 
 class Teacher
   attr_reader :properties
+
+  # initialize all the properites for teachers from the json into a hash
   def initialize(properties = {})
     @properties = properties
   end
 
+  # map out the raw teachers' data into a new array of teacher objects
   def self.all
     load_data.map do |teacher_data|
       new(teacher_data)
@@ -56,6 +64,7 @@ class Teacher
   end
 
   private
+  # parse the json file into a hash and return only the teachers' properties
   def self.load_data
     json_hash = JSON.parse( IO.read("data.json") )
     return json_hash["teachers"]
@@ -129,6 +138,7 @@ class PairByOrder
   end
 end
 
+#getting the last student from student array
 student = Student.all.last
 p student.properties["name"]
 p student.priorizied_teachers
