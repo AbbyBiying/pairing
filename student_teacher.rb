@@ -145,6 +145,8 @@ class PairByOrder
   # sort the teachers hash by points of pair in ascending order
   def ordered_teachers_hash
     @teachers_hash = @teachers_hash.sort_by { |teacher_name, points| points }.reverse.to_h
+    # puts "xxx"
+    # p teachers_hash
   end
 
   # make a new array of teacher's name by points of pair in descending order
@@ -160,7 +162,7 @@ end
 student = Student.all.last
 
 # print out the last student's name
-p student.properties["name"]
+# p student.properties["name"]
 
 # print out the array of teachers by points of pair in descending order for a student
-p student.priorizied_teachers
+# p student.priorizied_teachers
